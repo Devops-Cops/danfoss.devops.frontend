@@ -11,12 +11,7 @@ declare let $: any;
 export class AppComponent {
   title = 'sampleLogin';
 
-  login() {
-/*     $( 'loginForm' ).on( 'submit', function( event ) {
-      event.preventDefault();
-      alert( $( this ).serialize() );
-    }); */
-    const username = document.getElementById('exampleInputEmail1').textContent;
-    alert(username.toString());
+  login(username: string) {
+    alert('Welcome ' + username);
   }
 }
