@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 
 declare let $: any;
 @Component({
@@ -9,7 +8,8 @@ declare let $: any;
 })
 
 export class AppComponent {
-  title = 'sampleLogin';
+  title = 'DevOps Application';
+  headerValue = 'Login';
 
   login(username: string) {
     alert('Welcome ' + username);
