@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 
 declare let $: any;
 @Component({
@@ -9,14 +8,10 @@ declare let $: any;
 })
 
 export class AppComponent {
-  title = 'sampleLogin';
+  title = 'DevOps Application';
+  headerValue = 'Login';
 
-  login() {
-/*     $( 'loginForm' ).on( 'submit', function( event ) {
-      event.preventDefault();
-      alert( $( this ).serialize() );
-    }); */
-    const username = document.getElementById('exampleInputEmail1').textContent;
-    alert(username.toString());
+  login(username: string) {
+    alert('Welcome ' + username);
   }
 }
