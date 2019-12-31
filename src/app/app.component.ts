@@ -12,6 +12,6 @@ export class AppComponent {
   headerValue = 'Login';
 
   login(username: string) {
-    alert('Welcome ' + username);
+    alert('Hello ' + username);
   }
 }
