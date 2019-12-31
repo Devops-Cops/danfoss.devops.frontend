@@ -20,5 +20,10 @@ pipeline {
         userRemoteConfigs: [[url: 'https://github.com/Devops-Cops/danfoss.devops.frontend.git']]])   
         }
     }
+    stage('Install dependencies') {
+      steps {
+        sh 'npm install'
+      }
+    }
   }
 }
