@@ -14,15 +14,24 @@ pipeline {
             checkout([$class: 'GitSCM', 
         branches: [[name: '*/develop']], 
         doGenerateSubmoduleConfigurations: false, 
-        extensions: [[$class: 'RelativeTargetDirectory', 
-            relativeTargetDir: 'C:/Users/U325661/Tameem/Workspace_2019/Build']], 
+        extensions: [], 
         submoduleCfg: [], 
         userRemoteConfigs: [[url: 'https://github.com/Devops-Cops/danfoss.devops.frontend.git']]])   
         }
     }
-    stage('Install dependencies') {
+     stage('Install dependencies') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
+      }
+    }
+    stage('Build') {
+      steps {
+        bat 'npm run build'
+      }
+    }
+     stage('Test') {
+      steps {
+        bat 'npm run test-headless'
       }
     }
   }
