@@ -1,5 +1,4 @@
 pipeline {
-  agent { dockerfile true }
  
   tools {nodejs "node"}
  
@@ -12,7 +11,7 @@ pipeline {
     stage('Checkout') {
         steps {
             checkout([$class: 'GitSCM', 
-        branches: [[name: '*/develop']], 
+        branches: [[name: '*/feature/U325773']], 
         doGenerateSubmoduleConfigurations: false, 
         extensions: [], 
         submoduleCfg: [], 
@@ -35,4 +34,6 @@ pipeline {
       }
     }
   }
+  
+   agent { dockerfile true }
 }
