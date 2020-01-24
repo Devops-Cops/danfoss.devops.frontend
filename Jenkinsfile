@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent  docker { image 'node:7-alpine' }
  
   tools {nodejs "node"}
  
